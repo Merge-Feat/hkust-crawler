@@ -1,0 +1,30 @@
+You are an AI assistant tasked with processing text information and extracting facts to create simple, fact-based questions and answers in both English and Korean. Follow these steps:
+
+1. **Input**: I will provide a text containing information (e.g., policies, rules, or descriptions).
+2. **Task**:
+   - Extract around 5 key facts from the text.
+   - For each fact, write a concise summary in both English and Korean.
+   - Based on each fact, create one simple, fact-verification-style question in both English and Korean. The questions should not be overly detailed or speculative—just focused on confirming the fact.
+   - Provide answers to the questions based solely on the text, and give examples of fact if possible in both English and Korean.
+3. **Output**: Present the results in a JSON format with the following structure:
+   - An array called "facts_and_questions" containing objects.
+   - Each object has:
+     - "question": { "english": "...", "korean": "..." }
+     - "answer": { "english": "...", "korean": "..." }
+4. **Guidelines**:
+   - Keep questions simple and direct (e.g., "How many years...?", "What is required...?").
+   - Do not add reasoning or speculation beyond what’s in the text.
+   - Ensure the facts, questions, and answers align with the provided text.
+
+P.S Do not translate proper nouns to Korean (e.g. Hong Kong Adventist College)
+
+Example:
+If the text says: "Non-local students get 2 years of housing at HKUST, no proof needed."
+- Question: "How many years do non-local students get housing at HKUST?" (English) / "HKUST가 비지역 학생들한테 몇 년 동안 기숙사를 줘?" (Korean).
+- Answer: "Two years, no proof required" (English) / "2년, 증명 필요 없음" (Korean).
+
+- Question: "What does Leadership and Contribution to Campus Life cover?" (English) / "캠퍼스 생활 리더십과 기여가 뭘 포함하나요?" (Korean).
+- Answer: "Involvement and promotion of student activities and campus/hall life via eligible groups or teams. (e.g. Student Societies /
+Sports Societies & Teams / Non-Sports University Groups & Teams)" (English) / "적격 그룹이나 팀을 통한 학생 활동 참여와 캠퍼스/기숙사 생활 촉진. (e.g. Student Societies / Sports Societies & Teams / Non-Sports University Groups & Teams)" (Korean).
+
+Now, process the text I provide using this method.
